@@ -6,6 +6,7 @@ import Nav from './Component/Nav/Nav';
 import Banner from './Component/Banner/Banner'
 import Step from './Component/Step/Step'
 import Pricing from './Component/Pricing/Pricing'
+import Footer from './Component/footer/Footer'
 
 const dataFetch = async () =>{
   const res = await fetch("/data.json");
@@ -29,6 +30,7 @@ function App() {
    </Suspense>
    <Step></Step>
    <Pricing></Pricing>
+   <Footer></Footer>
     
      
     </>
