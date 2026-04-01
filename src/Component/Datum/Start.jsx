@@ -5,20 +5,26 @@ import Card from '../Card/Card'
 const Start = ({dataPromise}) => {
     const promise = use(dataPromise)
     const [selectButton,setSelectButton] = useState('product');
-    const [selectData,setselectData] = useState([]);
+    const [selectData,setSelectData] = useState([]);
     const clickHandler = (handeler) => {
         setSelectButton(handeler);
     }
     return (
-        <div className='max-w-300 mx-auto m-5'>
+        <div className='flex-col max-w-300 mx-auto m-5 space-y-3'>
+            <div className=' max-w-100 mx-auto items-center justify-center '> 
+            <h2 className='mx-auto justify-center'>Premium Digital Tools</h2> 
+            
+
+            <p>Choose from our curated collection of premium digital products designedto boost your productivity and creativity.</p>
+            </div>
             
             <div className='mx-auto flex  font-bold justify-center'> 
             <button onClick={()=> clickHandler('product')} className={` ${ selectButton === 'product' ? "btn btn-primary rounded-2xl" : "btn"}`}>Product</button>
-             <button onClick={()=> clickHandler('card')} className={`btn ${ selectButton === 'card' ? " btn-primary rounded-2xl" : "btn"}`}>Card ({setselectData.length})</button>
+             <button onClick={()=> clickHandler('card')} className={`btn ${ selectButton === 'card' ? " btn-primary rounded-2xl" : "btn"}`}>Card ({selectData.length})</button>
             {/* <button  className='btn btn-primary rounded-2xl'>Card</button>  */}
             </div>
 {
-    selectButton === 'product' ? <Datum dataPromise={promise} setselectData={selectData} selectData={selectData}></Datum> : <Card setselectData={setselectData} selectData={selectData}></Card>
+    selectButton === 'product' ? <Datum dataPromise={promise} setSelectData={setSelectData} selectData={selectData}></Datum> : <Card setSelectData={setSelectData} selectData={selectData}></Card>
 }
             
            
