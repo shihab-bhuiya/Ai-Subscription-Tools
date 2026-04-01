@@ -1,7 +1,7 @@
 
 import { Suspense } from 'react';
 import './App.css'
-import Datum from './Component/Datum//Datum'
+import Start from './Component/Datum//Start'
 
 const dataFetch = async () =>{
   const res = await fetch("/data.json");
@@ -20,7 +20,7 @@ function App() {
     <>
    
    <Suspense fallback={<span className='loading-spinner'></span>}>
-    <Datum dataPromise={dataPromise}> </Datum>
+    <Start dataPromise={dataPromise}> </Start>
    </Suspense>
     
      

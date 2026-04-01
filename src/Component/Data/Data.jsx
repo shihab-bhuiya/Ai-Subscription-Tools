@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
-const Data = ({data}) => {
+const Data = ({data,setSelectedData,selectedData}) => {
   console.log(data);
+
+   const [isSelected,setIsSelected] = useState(false);
+
+  const handler=()=>{
+
+    setIsSelected(true);
+
+    toast(`Buy${data.name}`);
+    setSelectedData([...selectedData,Data]);
+  }
     return (
         <div className='m-5'>
             
     
-    <div className="max-w-sm mx-auto bg-gray-100 rounded-2xl p-5  shadow-md relative">
+    <div className="max-w-sm mx-auto bg-gray-100 rounded-2xl p-5  shadow-md relative " >
       
       {/* Badge */}
       <div className= {`  absolute top-4 right-4 ${data.tag === 'Best Seller' ? 'bg-yellow-100' : data.tag === "Popular" ? 'bg-blue-500 text-white': data.tag === 'New' ?'bg-[#2EB967]' :'white'} text-sm px-3 py-1 rounded-full `}>
@@ -49,8 +60,10 @@ const Data = ({data}) => {
       </ul>
 
       {/* Button */}
-      <button className="w-full py-3 rounded-full btn btn-primary font-semibold bg-gradient-r from-purple-600 to-pink-50 hover:opacity-90 transition">
-        Buy Now
+      <button className="w-full py-3 rounded-full btn btn-primary font-semibold bg-gradient-r from-purple-600 to-pink-50 hover:opacity-90 transition"
+      onClick={handler} >
+        {isSelected ? "Subsripted" :  'Buy Now'}
+      
       </button>
     
     </div>

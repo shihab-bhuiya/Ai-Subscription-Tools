@@ -1,16 +1,21 @@
-import React, { use } from 'react';
+import React from 'react';
 import Data from '../Data/Data'
 
-const Datum = ({dataPromise}) => {
-    const datum = use(dataPromise);
-  console.log(datum);
+const Datum = ({dataPromise,setSelectedData,selectedData}) => {
+    // const datum = use(dataPromise);
+   
+  console.log(dataPromise);
     return (
     <div>
-        <div className='grid grid-cols-3 gap-3'> 
+        <div className='max-w-300 mx-auto grid grid-cols-3 gap-3'> 
 
         {
 
-        datum.map(data => <Data data={data}></Data>)
+        dataPromise.map(data => 
+        
+
+        <Data data={data} setSelectedData={setSelectedData} selectedData={selectedData}></Data>)
+
         }
 
         </div>
