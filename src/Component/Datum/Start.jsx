@@ -8,14 +8,15 @@ const Start = ({dataPromise}) => {
     const [selectData,setSelectData] = useState([]);
     const clickHandler = (handeler) => {
         setSelectButton(handeler);
+    
     }
     return (
         <div className='flex-col max-w-300 mx-auto m-5 space-y-3'>
-            <div className=' max-w-100 mx-auto items-center justify-center '> 
-            <h2 className='mx-auto justify-center'>Premium Digital Tools</h2> 
+            <div className=' max-w-100 mx-auto items-center justify-center text-center space-y-3'> 
+            <h2 className='mx-auto justify-center font-bold text-4xl'>Premium Digital Tools</h2> 
             
 
-            <p>Choose from our curated collection of premium digital products designedto boost your productivity and creativity.</p>
+            <p>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
             </div>
             
             <div className='mx-auto flex  font-bold justify-center'> 

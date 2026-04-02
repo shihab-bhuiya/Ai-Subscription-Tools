@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Data = ({data, setSelectData, selectData}) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const handler = () => {
     if (!selectData.some(item => item.id === data.id)) {
+      toast.success(`You Bought ${data.name} Succesfully`)
       setSelectData([...selectData, data]);
       setIsSelected(true);
     }

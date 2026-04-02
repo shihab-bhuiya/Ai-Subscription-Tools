@@ -48,7 +48,7 @@ const Nav = () => {
           <h2 className="block hover:text-pink-600 cursor-pointer">FAQ</h2>
 
           <div className="flex flex-col gap-2 mt-2">
-            <button className="btn w-full flex justify-center items-center gap-2"><IoMdCart /> Cart</button>
+            <button className="btn btn-soft w-full flex justify-center items-center gap-2"><IoMdCart /> Cart()</button>
             <button className="btn w-full">Login</button>
             <button className="btn btn-primary w-full rounded-2xl">Start</button>
           </div>
