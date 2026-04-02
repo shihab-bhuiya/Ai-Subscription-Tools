@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
+
 const Data = ({data, setSelectData, selectData}) => {
   const [isSelected, setIsSelected] = useState(false);
 

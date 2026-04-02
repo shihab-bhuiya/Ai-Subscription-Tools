@@ -1,5 +1,6 @@
 import React from "react";
 import img from '../../assets/banner.png'
+import { FaRegCircleDot } from "react-icons/fa6";
 
 const Banner = () => {
   return (
@@ -7,9 +8,10 @@ const Banner = () => {
       
       {/* Left Side */}
       <div className="space-y-5 text-center lg:text-left">
-        <button className="rounded-2xl bg-[#E1E7FF] text-[#4F39F6] px-4 py-2 text-sm">
-          New: AI-Powered Tools Available
-        </button>
+        <button className="flex items-center gap-2 rounded-2xl bg-[#E1E7FF] text-[#4F39F6] px-4 py-2 text-sm whitespace-nowrap">
+  <FaRegCircleDot />
+  <span>New: AI-Powered Tools Available</span>
+</button>
 
         <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight">
           Supercharge Your <br /> Digital Workflow
